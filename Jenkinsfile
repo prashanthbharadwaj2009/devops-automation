@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u javatechie -p ${dockerhubpwd}'
+                   sh 'docker login -u prashanthaws2009 -p ${dockerhubpwd}'
 
 }
                    sh 'docker push prashanthaws2009/kubernetes'
