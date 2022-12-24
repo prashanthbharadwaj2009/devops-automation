@@ -20,8 +20,8 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                  withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u prashanthaws2009 -p ${dockerhubpwd}'
+                  withCredentials([string(credentialsId: 'dockerhubpaswd', variable: 'dockerhubpaswd')]) {
+                   sh 'docker login -u prashanthaws2009 -p ${dockerhubpaswd}'
 
 }
                    sh 'docker push prashanthaws2009/kubernetes'
